@@ -29,3 +29,4 @@ This repository contains the CI/CD pipeline setup for a Kubernetes-based Voting 
 - Auto rollback and sync using ArgoCD
 
 ## 📂 Folder Structure:
+├── azure-pipelines.yml ├── k8s-specifications/ │ └── vote-deployment.yaml ├── scripts/ │ └── updateK8sManifests.sh ├── vote/ │ └── Dockerfile
