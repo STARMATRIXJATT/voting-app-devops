@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Example Voting App
 
 A simple distributed application running across multiple Docker containers.
@@ -63,3 +64,37 @@ The voting application only accepts one vote per client browser. It does not reg
 This isn't an example of a properly architected perfectly designed distributed app... it's just a simple
 example of the various types of pieces and languages you might see (queues, persistent data, etc), and how to
 deal with them in Docker at a basic level.
+=======
+# voting-app-devops
+CI/CD pipeline implementation for a Kubernetes-based Voting App using Azure DevOps for Continuous Integration and ArgoCD for Continuous Deployment.
+# Voting App DevOps Pipeline
+
+This repository contains the CI/CD pipeline setup for a Kubernetes-based Voting App. The CI pipeline is managed using **Azure DevOps Pipelines**, and the CD is handled via **ArgoCD**.
+
+## 🔧 Tools Used:
+- Azure DevOps Pipelines
+- Docker
+- Azure Container Registry (ACR)
+- Kubernetes (AKS or any k8s cluster)
+- ArgoCD
+- GitOps workflow
+
+## 🧩 What does this repo include?
+- `azure-pipelines.yml`: Defines the CI pipeline for building & pushing Docker images.
+- `scripts/updateK8sManifests.sh`: Bash script to automate image tag updates in Kubernetes manifests.
+- `k8s-specifications/`: Directory containing Kubernetes deployment YAML files.
+- `.dockerignore` & `Dockerfile` (for the Voting App)
+
+## ⚙️ CI/CD Workflow:
+1. **CI**: Azure DevOps pipeline triggers on commits to build Docker images and push them to ACR.
+2. **CD**: ArgoCD monitors the repo and auto-syncs Kubernetes manifests to deploy new versions automatically.
+
+## 🚀 Benefits:
+- Automated builds & deployments
+- Seamless integration with ACR & Kubernetes
+- GitOps-driven deployment model
+- Auto rollback and sync using ArgoCD
+
+## 📂 Folder Structure:
+├── azure-pipelines.yml ├── k8s-specifications/ │ └── vote-deployment.yaml ├── scripts/ │ └── updateK8sManifests.sh ├── vote/ │ └── Dockerfile
+>>>>>>> be0ed41da713f511017723aced8a2d59bd0c254f
